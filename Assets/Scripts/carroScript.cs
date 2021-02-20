@@ -109,4 +109,5 @@ public class carroScript : MonoBehaviour
         velocidadMin = true; //  Terminar poder velocidad mínima
        
     }
+
 }
