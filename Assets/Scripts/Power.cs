@@ -17,7 +17,7 @@ public class Power : MonoBehaviour
     //---------------------------------------------------
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Colisionó con el objeto: " + other.tag);
+        //Debug.Log("Colisionó con el objeto: " + other.tag);
       
         // Función para identificar cuando el objeto colisionó
         if (other.tag == "player1") // Controlo que la colisión se de únicamente con el objeto de fastPower

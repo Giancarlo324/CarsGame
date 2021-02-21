@@ -17,7 +17,10 @@ public class carroScript : MonoBehaviour
     public float factor = 0.9f;
     public float facrapidez = 0.1f;
     public float rapMax = 2.5f;
-    
+
+    public int nVueltas = 0;
+
+    public int maxVueltas = 2;
 
     //---------------------------------------------
     void Start()
@@ -88,6 +91,15 @@ public class carroScript : MonoBehaviour
         StartCoroutine(poderVelMax());
     }
 
+    public void fVueltas()
+    {
+        nVueltas += 1;
+
+        if(nVueltas==maxVueltas)
+        {
+            Debug.Log("Terminooo");
+        }
+    }
     //----------------------------------------------------
     public IEnumerator poderVelMax()
     {
