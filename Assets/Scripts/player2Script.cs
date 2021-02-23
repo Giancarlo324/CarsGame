@@ -19,14 +19,14 @@ public class player2Script : MonoBehaviour
     public float rapMax = 2.5f;
     public int nVueltas = 0;
 
-    public int maxVueltas = 2;
+    public int maxVueltas;
 
     //---------------------------------------------
     void Start()
     {
         // Posición predeterminada del auto al iniciar el juego
         transform.position = new Vector3(1.66f, 8.63f, 0);
-
+        maxVueltas = 3;
     }
 
     //---------------------------------------------
@@ -92,10 +92,11 @@ public class player2Script : MonoBehaviour
     public void fVueltas()
     {
         nVueltas += 1;
-
+        Debug.Log(maxVueltas);
         if (nVueltas == maxVueltas)
         {
-            Debug.Log("Terminooo");
+            //Debug.Log("Terminooo");
+            FindObjectOfType<gameManager>().EndGame();
         }
     }
     //----------------------------------------------------

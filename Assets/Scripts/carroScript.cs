@@ -20,13 +20,14 @@ public class carroScript : MonoBehaviour
 
     public int nVueltas = 0;
 
-    public int maxVueltas = 2;
+    public int maxVueltas;
 
     //---------------------------------------------
     void Start()
     {
         // Posición predeterminada del auto al iniciar el juego
         transform.position = new Vector3(1.66f,7.87f,0);
+        maxVueltas = 3;
 
     }
 
@@ -94,10 +95,12 @@ public class carroScript : MonoBehaviour
     public void fVueltas()
     {
         nVueltas += 1;
-
+        Debug.Log(nVueltas);
         if(nVueltas==maxVueltas)
         {
-            Debug.Log("Terminooo");
+            Debug.Log(nVueltas);
+            //Debug.Log("Terminooo");
+            FindObjectOfType<gameManager>().EndGame();
         }
     }
     //----------------------------------------------------
